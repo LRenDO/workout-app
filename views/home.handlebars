@@ -1,0 +1,57 @@
+<h1>Workout List</h1>
+<form id="resetForm">
+  <input type="submit" name="Reset" value="CLEAR ALL DATA">
+</form>
+<form id="addForm">
+  <label for="name">Exercise Name*</label>
+  <input type="text" name="name" id="name" required>
+  <label for="reps">Number of Reps*</label>
+  <input type="number" name="reps" id="reps" required>
+  <label for="weight">Weight*</label>
+  <input type="number" name="weight" id="weight" required>
+  <label for="dateDone">Date Completed*</label>
+  <input type="date" name="dateDone" id="dateDone" required>
+  <p>Select Unit:*</p>
+  <input type="radio" name="units" id="kg" value="kg" required>
+  <label for="kg">Kilograms</label>
+  <input type="radio" name="units" id="lb" value="lb" required>
+  <label for="lb">Pounds</label>
+  <input type="submit" name="Add" value="Add">
+</form>
+
+{{#if workouts}}
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Reps</th>
+      <th>Weight</th>
+      <th>Date</th>
+      <th>Units</th>
+      <th colspan="2">Action</th>
+    </tr>
+  </thead>
+  {{#each workouts}}
+  <tr>
+    <td>{{this.name}}</td>
+    <td>{{this.reps}}</td>
+    <td>{{this.weight}}</td>
+    <td>{{this.dateDone}}</td>
+    <td>{{this.units}}</td>
+    <td>
+      <form id="deleteForm">
+        <input type="hidden" name="id" id="{{this.id}}" value="{{this.id}}">
+        <input type="submit" name="Delete" value="Delete">
+      </form>
+    </td>
+    <td>
+      <form id="editForm">
+        <input type="hidden" name="id" id="{{this.id}}" value="{{this.id}}">
+        <input type="submit" name="Edit" value="Edit">
+      </form>
+    </td>
+  </tr>
+  {{/each}}
+</table>
+{{/if}}
+

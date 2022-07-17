@@ -1,0 +1,29 @@
+/*---------------*/
+/* Global Styles */
+/*---------------*/
+
+/*Source: https://www.w3schools.com/css/css_table.asp*/
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td, th{
+  padding: 5px;
+}
+
+input{
+  display: block;
+  margin-bottom: 10px;
+}
+
+#kg, #lb{
+  display: inline;
+}
+
+#add{
+  margin: 10px;
+}

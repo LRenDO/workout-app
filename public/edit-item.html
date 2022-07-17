@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<title>Edit Item Page</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+  <body>
+    <h1>Edit Exercise</h1>
+    <form id="updateForm" action="/" method="post">
+      <label for="name">Exercise Name*</label>
+      <input type="text" name="name" id="name" value="" required>
+      <label for="reps">Number of Reps*</label>
+      <input type="number" name="reps" id="reps" value="" required>
+      <label for="weight">Weight</label>
+      <input type="number" name="weight" id="weight" value="" required>
+      <label for="dateDone">Date Completed*</label>
+      <input type="date" name="dateDone" id="dateDone" value="" required>
+      <p>Select Unit:*</p>
+      <input type="radio" name="units" id="kg" value="kg" required>
+      <label for="kg">Kilograms</label>
+      <input type="radio" name="units" id="lb" value="lb" required>
+      <label for="lb">Pounds</label>
+      <input type="hidden" name="id" id="updateId" value="">
+      <input type="submit" name="Update" value="Update">
+    </form>
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>
+
